@@ -1,0 +1,431 @@
+<!--
+Steven Formisano
+Project Name: (Professional Website)
+Due Date (8/31/2023)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXKi8DfRxokUBLCD3Y8DYWHAcpxv1ugXVPFA&usqp=CAU" type="image/png">
+    <style>
+        /* Style for the heading bar */
+        .heading {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            text-decoration: overline;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 25px;
+        }
+        
+        /* Container for the header section */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        /* Style for the navigation bar */
+        .navbar {
+            background-color: #333;
+            color: white;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Style for navigation bar links */
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 18px 24px;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        /* Change color of navigation bar links on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Style for the footer */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        /*Container*/
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        /* Flex item for the main content */
+        .main-content {
+            flex: 1;
+        }
+
+        /* Style for the profile image */
+        .profile-image-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile-image {
+            width: 100px;
+            height: 100px; 
+            background-image: url('PfP Test.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .heading h1 {
+            margin: 0;
+        }
+
+        body, html {
+          height: 100%;
+          margin: 0;
+          font: 400 15px/1.8 "Lato", sans-serif;
+          color: #777;
+        }
+        /*Parallax*/
+        .bgimg-1, .bgimg-2, .bgimg-3 , .bgimg-4{
+          position: relative;
+          opacity: 0.65;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        
+        }
+        .bgimg-1 {
+          background-image: url("image-1-test.jpg");
+          min-height: 100%;
+        }
+        
+        .bgimg-2 {
+          background-image: url("image-2-test.jpg");
+          min-height: 50%;
+        }
+        
+        .bgimg-3 {
+          background-image: url("Image-3-test.jpg");
+          min-height: 100%;
+        }
+        
+        .bgimg-4 {
+          background-image: url("Image-4-test.jpg");
+          min-height: 700px;
+        }
+        
+        .caption {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          text-align: center;
+          color: #000;
+        }
+        
+        .caption span.border {
+          background-color: #111;
+          color: #fff;
+          padding: 18px;
+          font-size: 25px;
+          letter-spacing: 10px;
+        }
+        
+        h3 {
+          letter-spacing: 5px;
+          text-transform: uppercase;
+          font: 20px "Lato", sans-serif;
+          color: #111;
+        }
+
+        /* Flex container for the content */
+        .content-container {
+            display: flex;
+            min-height: 35vh;
+            align-items: stretch;
+        }
+
+        /* Left column for text */
+        .left-column {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Flex container for the right column */
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align images to the left */
+            padding: 10px;
+        }
+
+        /* Add styles for the thumbnail */
+        .thumbnail {
+            margin: 10px;
+            position: relative;
+        }
+
+        /* Add styles for the thumbnail image */
+        .thumbnail img {
+            width: 200px; /* Adjust the size as needed */
+            height: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Apply the transparency effect on hover */
+        .thumbnail:hover img {
+            opacity: 0.75;
+        }
+    /* Scambled Text */
+    @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+        
+        .scramble-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+        }
+        
+        .scramble-text {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+            font-size: 75px;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .dud {
+            color: #757575;
+        }
+        
+    </style>
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!--|           HTML/SCRIPT Code          |-->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header-container">
+        <div class="profile-image-container">
+            <div class="profile-image"></div>
+        </div>
+        <div class="navbar">
+            <a href="#about">About</a>
+            <a href="#PastProjects">Past Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    
+    <!-- Scrambled Text -->
+    <div class="caption">
+        <span class="border" style="background-color:transparent;">
+            <div class="scramble-container">
+                <div class="scramble-text"></div>
+            </div>
+        </span>
+    </div>
+    <!-- Parallax Sections -->
+    <div class="bgimg-4">
+    </div>
+    <!-- About Me -->
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+        <h3 style="text-align:center;">About Me</h3>
+        <div id="about" class="main-content">
+            <!-- Content Goes Here -->
+            <p>
+                I am a Senior in high school with three coding language certifications which demonstrates
+                dedication, fast learning, and hardworking.
+                
+                I have contributed my time and skills as a volunteer at the Apache Junction Public Library, where I actively assisted patrons with various needs and enhanced their overall experience. Additionally, I crafted and assembled essential homeless care packages, providing vital supplies and support to the homeless community in New Mexico. These experiences have helped me develop a strong sense of empathy and compassion towards others.
+                
+                I am currently enrolled in Comp Prog Coding & Mobile App Design at East Valley Institute of Technology, and I am expected to graduate from Casteel High School in May 2024. I am also taking American Sign Language classes at Chandler Online Academy to close the communication gap in the workspace.
+                
+                During my 7th and 8th-grade years, I was a member of the National Junior Honor Society at Eduprize, and I have received certificates in Software and App Design Fundamentals, JavaScript and python from East Valley Institute of Technology. These achievements demonstrate my commitment to learning and my proficiency in coding, as well as my ability to set and achieve goals.
+                
+                With my skills in coding, active listening, communication, collaboration, adaptability, and creativity, I am confident that I can contribute to the success of your team. In my spare time, I enjoy coming up with different concepts for games such as Dungeons and Dragons, where I use active listening, collaboration, adaptability, and creativity to create engaging and immersive campaigns for my players. I actively listen to their feedback to improve my storytelling, collaborate with them to create a dynamic and interactive experience, and adapt to unexpected challenges during gameplay. These skills allow me to create a satisfying and enjoyable environment for everyone involved.
+            </p>
+        </div>
+    </div>
+
+    <div class="bgimg-2">
+    </div>
+    <!-- Past Projects -->
+    <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+            <div id="PastProjects" class="main-content">
+                <!-- past projects content goes here -->
+                <h3 style="color: #fff; text-align: center;">Past Projects</h3>
+                <p style="color: white; text-align: center; font-size: 20px;">As I delve deeper into the world of coding, I anticipate the incorporation of diverse projects that reflect both my growth as a student and the widening scope of my skills.
+                    while my current collection is modest, the prospect of what's to come is exciting. With every new project I undertake, I aspire to elevate my capabilities and present a more comprehensive picture of my coding journey.</p>
+    
+                <div class="content-container">
+                    <div class="right-column">
+                        <!-- Thumbnails and Links to projects -->
+                        <div class="thumbnail">
+                            <a href="HTMLCSS- PA13 Formisano.html">
+                                <img src="Assignment 13 Thumbnail.png" alt="Thumbnail Image 1: Assignment 13 example">
+                            </a>
+                        </div>
+                        <div class="thumbnail">
+                            <a href="HTMLCSS- PA14 Formisano/HTMLCSS- PA14 Formisano.html">
+                                <img src="Assignment 14 Thumbnail.png" alt="Thumbnail Image 2: Assignment 14 example">
+                            </a>
+                        </div>
+                        <!-- Add more thumbnails when needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgimg-3">
+    </div>
+    <!-- Contact -->
+    <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+            <div id="contact" class="main-content">
+                <h3 style="color: #fff; text-align: center;">Contact</h3>
+                <!-- Your contact content goes here -->
+                <ul>
+                    <li style="color: #fff; font-size: 20.5px;">Phone Number: 602-882-9530</li>
+                    <li style="color: #fff; font-size: 20.5px;">Email: <a style="color: rgb(22, 146, 196);" href="mailto:formisanosteven@yahoo.com">formisanosteven@yahoo.com</a></li>
+                    <li style="color: #fff; font-size: 20.5px;">LinkedIn: <a style="color: rgb(22, 146, 196);" href="https://tinyurl.com/rc23bv2d">LinkedIn Profile</a></li>
+                    <li style="color: #fff; font-size: 20.5px;">GitHub: <a style="color: rgb(22, 146, 196);" href="https://github.com/Ghastlyskull/Projects">GitHub Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2023 Steven Formisano. All rights reserved.
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.addEventListener("DOMContentLoaded", function () {
+            const anchorLinks = document.querySelectorAll('.navbar a[href^="#"]');
+            
+            anchorLinks.forEach(anchorLink => {
+                anchorLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    
+                    const targetId = this.getAttribute("href");
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const yOffset = -50; // Adjust the scrolling offset if needed
+                        const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+
+        class TextScramble {
+              constructor(el) {
+                this.el = el; // Reference to the target element
+                this.chars = '!<>-_\\/[]{}—=+*^?#________'; // Set of characters for scrambling
+                this.update = this.update.bind(this); // Bind the update method to the instance
+              }
+              
+              setText(newText) {
+                const oldText = this.el.innerText; // Get the current text content
+                const length = Math.max(oldText.length, newText.length); // Determine the maximum length
+                const promise = new Promise((resolve) => this.resolve = resolve); // Create a promise for text change completion
+                this.queue = []; // Initialize the queue for character transitions
+                
+                // Populate the queue with transition details for each character
+                for (let i = 0; i < length; i++) {
+                  const from = oldText[i] || ''; // Previous character or empty string
+                  const to = newText[i] || ''; // New character or empty string
+                  const start = Math.floor(Math.random() * 40); // Start frame for character transition
+                  const end = start + Math.floor(Math.random() * 40); // End frame for character transition
+                  this.queue.push({ from, to, start, end }); // Add details to the queue
+                }
+                
+                cancelAnimationFrame(this.frameRequest); // Clear any previous animation frame
+                this.frame = 0; // Initialize frame counter
+                this.update(); // Start the update loop for character transitions
+                return promise; // Return the promise
+              }
+              
+              update() {
+                let output = ''; // Initialize the output string
+                let complete = 0; // Counter for completed character transitions
+                
+                // Loop through the queue and update characters
+                for (let i = 0, n = this.queue.length; i < n; i++) {
+                  let { from, to, start, end, char } = this.queue[i]; // Destructure queue entry
+                  if (this.frame >= end) {
+                    complete++; // Transition complete, increment counter
+                    output += to; // Add target character to output
+                  } else if (this.frame >= start) {
+                    if (!char || Math.random() < 0.28) {
+                      char = this.randomChar(); // Generate random character if not defined
+                      this.queue[i].char = char; // Update queue with random character
+                    }
+                    output += `<span class="dud">${char}</span>`; // Add random character with dud styling
+                  } else {
+                    output += from; // Add source character to output
+                  }
+                }
+                
+                this.el.innerHTML = output; // Update the element's content with the output
+                if (complete === this.queue.length) {
+                  this.resolve(); // If all transitions complete, resolve the promise
+                } else {
+                  this.frameRequest = requestAnimationFrame(this.update); // Continue animation loop
+                  this.frame++; // Increment frame counter
+                }
+              }
+              
+              randomChar() {
+                return this.chars[Math.floor(Math.random() * this.chars.length)]; // Return a random character
+              }
+            }
+            
+            // Phrases
+            // ——————————————————————————————————————————————————
+            
+            const phrases = [
+              'Steven Formisano',
+              'Aspiring Programmer,', 
+              'and Game Designer',
+              ''
+            ]
+            
+            const el = document.querySelector('.scramble-text')
+            const fx = new TextScramble(el)
+            
+            let counter = 0
+            const next = () => {
+              fx.setText(phrases[counter]).then(() => {
+                setTimeout(next, 800)
+              })
+              counter = (counter + 1) % phrases.length
+            }
+            
+            next()
+    </script>
+</body>
+</html>

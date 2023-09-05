@@ -1,0 +1,208 @@
+<!--Steven Formisano Project Name - (HTML/CSS- PA14) Due Date - (8/17/2023)-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*Header CSS*/
+.header {
+  background-color: #77b78a; /* Neutral green background color */
+  padding: 20px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #c6e5cc; /* Lighter background color */
+  overflow: hidden; /* Clear the floats inside the navbar */
+  display: flex;
+  justify-content: center; /* Center the navbar elements horizontally */
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #87bbad; /* Slightly darker color on hover */
+}
+/*Image gallery CSS Code*/
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+  margin: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 300px; /* Set a maximum width for the image */
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Form Styles */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-container label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form-container input, .form-container select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.form-container button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Visitor Counter Styles */
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.counter {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.increment-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+  background-color: #77b78a;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1 style="color: floralwhite;">Welcome to My Website</h1>
+</div>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- Image gallery code -->
+<div class="container">
+  <div class="gallery">
+    <a target="_blank" href="MyM1.jpg">
+      <img src="MyM1.jpg">
+    </a>
+    <div class="desc">Make your own outposts to challenge others</div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="MyM2.jpg">
+      <img src="MyM2.jpg">
+    </a>
+    <div class="desc">Raid outposts created by other players inside </div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="MyM3.jpg">
+      <img src="MyM3.jpg">
+    </a>
+    <div class="desc">Located in the New England area, where uncontrolled experiments took place</div>
+  </div>
+</div>
+
+<!-- Form -->
+<div class="form-container">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+  
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+  
+    <label for="dropdown">Select an Option:</label>
+    <select id="dropdown" name="dropdown">
+      <option value="Suggestion">Suggestion</option>
+      <option value="Bug Report">Bug Report</option>
+      <option value="Help">Help</option>
+    </select>
+  
+    <button type="submit">Submit</button>
+  </div>
+  
+  <!-- Visitor Counter -->
+  <div class="counter-container">
+    <div class="counter">Visitor Count: <span id="visitorCount">0</span></div>
+    <button class="increment-button" onclick="incrementCount()">Increment</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Steven Formisano Project Name - (HTML/CSS- PA14) Due Date - (8/17/2023)
+  </div>
+
+  <!-- Script(s) -->
+  <script>
+    let count = 0;
+  
+    function incrementCount() {
+      count++;
+      document.getElementById('visitorCount').textContent = count;
+    }
+  </script>
+  
+  </body>
+  </html>
